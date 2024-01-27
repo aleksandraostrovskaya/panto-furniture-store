@@ -1,0 +1,54 @@
+.nav-list {
+	align-self: center;
+	justify-self: center;
+	font-weight: 500;
+	font-style: 18px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 65px;
+
+	@include tablet() {
+	display: none;
+}
+}
+.nav-list__item {
+	position: relative;
+	padding-bottom: 10px;
+}
+.nav-list__link {
+	transition: opacity 0.3s ease-out;
+	&:hover {
+		opacity: 0.7
+	}
+
+	&--dropdown {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+
+		&::after {
+			content: url('./../img/icons/down.svg');
+			height: 18px;
+	
+		}
+	}
+
+}
+
+.nav-list__sub-nav {
+	opacity: 0;
+	width: 140px;
+	position: absolute;
+	pointer-events: none;
+	left: 0;
+	top: calc(100%);
+	transform: translate(0%, 10%);
+	transition: all 0.4s ease-in-out;
+}
+
+.nav-list__item:hover .nav-list__sub-nav{
+	pointer-events: all;
+	opacity: 1;
+	transform: translate(0%, 0%);
+}
