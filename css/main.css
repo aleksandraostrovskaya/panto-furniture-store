@@ -556,14 +556,14 @@ html, body {
 }
 
 .tab-controls__btn {
-  width: 84px;
+  width: clamp(54px, 2.693rem + 3.41vw, 84px);
   height: 45px;
   padding: 7px 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 32px;
-  font-size: 18px;
+  font-size: clamp(14px, 0.784rem + 0.45vw, 18px);
   font-weight: 500;
   line-height: 185%; /* 33.3px */
   color: rgba(30, 30, 30, 0.8);
